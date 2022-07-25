@@ -41,3 +41,9 @@ Following configuration of droplets were to run IPFS node:
 
 ![Node_Bangalore](ipfs1.png)
 ![Node_San_Francisco](ipfs2.png)
+
+Follow this perfect [tutorial](https://medium.com/pinata/how-to-deploy-an-ipfs-node-on-digital-ocean-c59b9e83098e) to setup ipfs node on digital ocean droplet.
+
+### Files to Pin
+
+Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 400MB were pinned on the IPFS network.

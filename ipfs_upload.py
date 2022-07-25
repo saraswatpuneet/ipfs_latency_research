@@ -21,8 +21,8 @@ class IPFSStorage():
 
 
 if __name__ == "__main__":
-    ipfs_storage_1 = IPFSStorage("/ip4/<node-ip>/tcp/5001")
-    ipfs_storage_2 = IPFSStorage("/ip4/<node-ip>/tcp/5001")
+    ipfs_storage_1 = IPFSStorage("/ip4/128.199.19.171/tcp/5001")
+    ipfs_storage_2 = IPFSStorage("/ip4/128.199.19.171/tcp/5001")
     hash_1_a = ipfs_storage_1.store("a")
     hash_1_b = ipfs_storage_1.store("b")
     hash_1_c = ipfs_storage_1.store("c")
