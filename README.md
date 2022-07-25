@@ -27,10 +27,11 @@ At time of this study following active gateways were evaluated from the list obt
 | [Infura](infura-ipfs.io)|
 
 Following measurements were performed on the following gateways:
-    - Average latency i.e. time to first byte
-    - Average throughput i.e. bytes per second to download a file which includes latency.
-    - Check for content-length in response header.
-    - Any download failures were observed when test script was run few times.
+
+* Average latency i.e. time to first byte.
+* Average throughput i.e. bytes per second to download a file which includes latency.
+* Check for content-length in response header.
+* Any download failures were observed when test script was run few times.
 
 ### IPFS Node Setup
 
