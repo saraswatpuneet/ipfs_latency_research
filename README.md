@@ -41,4 +41,3 @@ Following configuration of droplets were to run IPFS node:
 
 ![Node_Bangalore](ipfs1.png)
 ![Node_San_Francisco](ipfs2.png)
-
