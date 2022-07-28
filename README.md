@@ -40,6 +40,8 @@ Following configuration of droplets were to run IPFS node:
 
 Follow this perfect [tutorial](https://medium.com/pinata/how-to-deploy-an-ipfs-node-on-digital-ocean-c59b9e83098e) to setup ipfs node on digital ocean droplet.
 
+Note: The IPFS nodes were not configured to be gateways.
+
 ### Files to Pin
 
 Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 420MB were pinned on the IPFS network.
@@ -50,7 +52,7 @@ Complete results for respective pinned files are recorded, requests to the IPFS 
 
 ## File A: Size 10MB
 
-Note: 3 Request were made per file per gateway.
+Note: 3 Request were made per file per gateway. Requests were made about 30 mins after pinning the files.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
@@ -61,7 +63,7 @@ Note: 3 Request were made per file per gateway.
 
 ## File B: Size 50MB
 
-Note: 3 Request were made per file per gateway.
+Note: 3 Request were made per file per gateway. Requests were made about 30 mins after pinning the files.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
@@ -74,9 +76,10 @@ Note: 3 Request were made per file per gateway.
 
 Note:
 
-* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
+* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds.
 * Only 3 request per file per gateway were made.
 * Larger files were run in different node sessions to download.
+* Requests were made about 30 mins after pinning the files.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
@@ -89,9 +92,10 @@ Note:
 
 Note:
 
-* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
+* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds.
 * Only 3 request per file per gateway were made.
 * Larger files were run in different node sessions to download.
+* Requests were made about 2-5 Mins after pinning the file.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
