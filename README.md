@@ -54,7 +54,7 @@ Complete results for respective pinned files are recorded, requests to the IPFS 
 
 Note: 3 Request were made per file per gateway. Requests were made about 30 mins after pinning the files.
 
-|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s) | Avg. Throughput with Latency<br>(MB/s)    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
 |  |
 | cf-ipfs.com            | 877.33                      | 6.9 | 4.7 | 2.11/10.28                 | Yes             | 0%                     |
@@ -65,7 +65,7 @@ Note: 3 Request were made per file per gateway. Requests were made about 30 mins
 
 Note: 3 Request were made per file per gateway. Requests were made about 30 mins after pinning the files.
 
-|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s) | Avg. Throughput with Latency<br>(MB/s)    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
 |  |
 | cf-ipfs.com            | 449.33                      | 19.68 | 16.7 | 18.5/22.5                 | Yes             | 0%                     |
@@ -81,7 +81,7 @@ Note:
 * Larger files were run in different node sessions to download.
 * Requests were made about 30 mins after pinning the files.
 
-|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s) | Avg. Throughput with Latency<br>(MB/s)    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
 |  |
 | cf-ipfs.com            | 1734.3                     | 7.21 | 6.5 | 1.28/18.91                 | Yes             | 0%                     |
@@ -97,7 +97,7 @@ Note:
 * Larger files were run in different node sessions to download.
 * Requests were made about 2-5 Mins after pinning the file and then again an hour after pinning.
 
-|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s) | Avg. Throughput with Latency<br>(MB/s)    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
 |  |
 | cf-ipfs.com            | 393.3                     | 27.2 | 26.49 | 26.7/27.9                 | Yes             | 0%                     |
