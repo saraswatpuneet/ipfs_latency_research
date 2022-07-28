@@ -46,9 +46,9 @@ Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 420MB were pinn
 
 ## Results
 
-Complete results for respective pinned files are recorded on a_file.csv, b_file.csv, c_file.csv and d_file.csv. Following are numbers recorded for different file sizes
+Complete results for respective pinned files are recorded, requests to the IPFS gateway services were made about 15-20 mins after pinning the files to IPFS nodes.
 
-## File A: Size 10MB:
+## File A: Size 10MB
 
 Note: 3 Request were made per file per gateway.
 
