@@ -76,6 +76,7 @@ Note:
 
 * Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
 * Only 3 request per file per gateway were made.
+* Larger files were run in different node sessions to download.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
@@ -90,10 +91,11 @@ Note:
 
 * Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
 * Only 3 request per file per gateway were made.
+* Larger files were run in different node sessions to download.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
 |  |
-| cf-ipfs.com            | 1734.3                     | 7.21 | 6.5 | 1.28/18.91                 | Yes             | 0%                     |
-| cloudflare-ipfs.com    | 2312.3                      | 17.6 | 16.7 | 8.03/24.8                 | Yes             | 0%                     |
-| ipfs.infura.io    | 1346.3                      | 4.65 | 4.23 | 2.6/11.37                 | Yes             | 33%                     |
+| cf-ipfs.com            | 393.3                     | 27.2 | 26.49 | 26.7/27.9                 | Yes             | 0%                     |
+| cloudflare-ipfs.com    | 106                      | 28.87 | 28.65 | 28/30                 | Yes             | 0%                     |
+| ipfs.infura.io    |-                      |- | - | -                 | -             | 100%                     |
