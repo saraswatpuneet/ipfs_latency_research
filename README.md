@@ -18,12 +18,8 @@ At time of this study following active gateways were evaluated from the list obt
 
 | Gateway|
 |-------|
-| [Cloud](ipfs-gateway.cloud)|
-| [CloudFare](cf-ipfs.com)|
-| [Storry](storry.tv)|
-| [DWEB](dweb.link)|
-| [NFTStorage](nftstorage.link)|
-| [4everland](4everland.io)|
+| [CF](cf-ipfs.com)|
+| [CloudFare]([infura.io](https://cloudflare-ipfs.com/ipfs/))|
 | [Infura](infura-ipfs.io)|
 
 Following measurements were performed on the following gateways:
@@ -47,3 +43,9 @@ Follow this perfect [tutorial](https://medium.com/pinata/how-to-deploy-an-ipfs-n
 ### Files to Pin
 
 Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 400MB were pinned on the IPFS network.
+
+## Results
+
+Complete results for respective pinned files are recorded on a_file.csv, b_file.csv, c_file.csv and d_file.csv. Following are numbers recorded for different file sizes
+
+## Smaller File A; 10 MB and 50 MB

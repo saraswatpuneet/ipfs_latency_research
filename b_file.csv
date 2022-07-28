@@ -1,0 +1,8 @@
+"sep=,"
+url,started,ended,totalTimeMs,ttfbMs,redirects,contentLength,downloadedLength,downloadSpeedMbps,downloadSpeedWithTtfbMbps,error
+https://cf-ipfs.com/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:32:03.517922,2022-07-27 16:36:00.012235,236494,42870,1,52428800,52428800,0.25823245052266247,0.21142185425423055,
+https://cf-ipfs.com/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:36:00.018540,2022-07-27 16:38:16.473015,136454,3121,1,52428800,52428800,0.37500093750234376,0.3664238497955355,
+https://cloudflare-ipfs.com/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:38:16.473332,2022-07-27 16:40:18.060196,121586,2552,0,52428800,52428800,0.4200480534973201,0.41123155626470154,
+https://cloudflare-ipfs.com/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:40:18.060530,2022-07-27 16:42:35.373822,137313,206,0,52428800,52428800,0.36467868161363026,0.3641315825886842,
+https://ipfs.infura.io/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:42:35.374124,2022-07-27 16:43:54.484533,79110,5036,1,52428800,31334841,0.4034240498740926,0.37774280205250327,HttpException: Connection closed while receiving data, uri = https://bafybeidfxnv3y4hvmk5xcn2iccmdbq6msqi5jdg7wrsvotzjoemi6ba5fu.ipfs.infura-ipfs.io/
+https://ipfs.infura.io/ipfs/QmVBmeFA9mH1rLzizQyUHJq7meEWCaZjnnbtQgpHVw86qa,2022-07-27 16:43:54.484763,2022-07-27 16:45:12.112515,77627,5210,1,52428800,15331968,0.20190982920533163,0.18835848482567277,HttpException: Connection closed while receiving data, uri = https://bafybeidfxnv3y4hvmk5xcn2iccmdbq6msqi5jdg7wrsvotzjoemi6ba5fu.ipfs.infura-ipfs.io/
