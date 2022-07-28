@@ -24,7 +24,7 @@ At time of this study following active gateways were evaluated from the list obt
 
 Following measurements were performed on the following gateways:
 
-* Average latency i.e. time to first byte.
+* Average latency i.e. time to availability.
 * Average throughput i.e. bytes per second to download a file which includes latency.
 * Check for content-length in response header.
 * Any download failures were observed when test script was run few times.
@@ -95,7 +95,7 @@ Note:
 * Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds.
 * Only 3 request per file per gateway were made.
 * Larger files were run in different node sessions to download.
-* Requests were made about 2-5 Mins after pinning the file.
+* Requests were made about 2-5 Mins after pinning the file and then again an hour after pinning.
 
 |Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
 | ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
