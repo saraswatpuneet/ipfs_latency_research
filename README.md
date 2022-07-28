@@ -18,9 +18,9 @@ At time of this study following active gateways were evaluated from the list obt
 
 | Gateway|
 |-------|
-| [CF](cf-ipfs.com)|
-| [CloudFare](cloudflare-ipfs.com)|
-| [Infura](infura-ipfs.io)|
+| [CF](https://cf-ipfs.com)|
+| [CloudFare](https://cloudflare-ipfs.com)|
+| [Infura](https://infura-ipfs.io)|
 
 Following measurements were performed on the following gateways:
 
