@@ -42,10 +42,58 @@ Follow this perfect [tutorial](https://medium.com/pinata/how-to-deploy-an-ipfs-n
 
 ### Files to Pin
 
-Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 400MB were pinned on the IPFS network.
+Four files  named a, b, c and d with sizes 10MB, 50MB, 150MB and 420MB were pinned on the IPFS network.
 
 ## Results
 
 Complete results for respective pinned files are recorded on a_file.csv, b_file.csv, c_file.csv and d_file.csv. Following are numbers recorded for different file sizes
 
-## Smaller File A; 10 MB and 50 MB
+## File A: Size 10MB:
+
+Note: 3 Request were made per file per gateway.
+
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+| ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
+|  |
+| cf-ipfs.com            | 877.33                      | 6.9 | 4.7 | 2.11/10.28                 | Yes             | 0%                     |
+| cloudflare-ipfs.com    | 114.33                      | 17.36 | 14.43 | 14.81/21.83                 | Yes             | 0%                     |
+| ipfs.infura.io    | 1820                      | 2.57 | 1.788 | 1.93/3.27                 | Yes             | 0%                     |
+
+## File B: Size 50MB
+
+Note: 3 Request were made per file per gateway.
+
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+| ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
+|  |
+| cf-ipfs.com            | 449.33                      | 19.68 | 16.7 | 18.5/22.5                 | Yes             | 0%                     |
+| cloudflare-ipfs.com    | 231                      | 22.22 | 20.767 | 7.52/32.34                 | Yes             | 0%                     |
+| ipfs.infura.io    | 1282                      | 9.76 | 7.737 | 2.74/15.65                 | Yes             | 0%                     |
+
+## File C: Size 150MB
+
+Note:
+
+* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
+* Only 3 request per file per gateway were made.
+
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+| ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
+|  |
+| cf-ipfs.com            | 1734.3                     | 7.21 | 6.5 | 1.28/18.91                 | Yes             | 0%                     |
+| cloudflare-ipfs.com    | 2312.3                      | 17.6 | 16.7 | 8.03/24.8                 | Yes             | 0%                     |
+| ipfs.infura.io    | 1346.3                      | 4.65 | 4.23 | 2.6/11.37                 | Yes             | 33%                     |
+
+## File D: Size 420MB
+
+Note:
+
+* Larger file downloads are prone to interruption hence we see failures as timeout is forced to be 500 seconds
+* Only 3 request per file per gateway were made.
+
+|Gateway | Avg Latency<br>(ms) | Avg Throughput<br>(MB/s)\* | Avg. Throughput with Latency<br>(MB/s)\*    |Min/Max Download Speed<br>(MB/s)   | Content-length | % Downloads failed\*\* |
+| ---------------------- | -------------------------- | ----- | ----- | ------------------- | -------------- | ---------------------- |
+|  |
+| cf-ipfs.com            | 1734.3                     | 7.21 | 6.5 | 1.28/18.91                 | Yes             | 0%                     |
+| cloudflare-ipfs.com    | 2312.3                      | 17.6 | 16.7 | 8.03/24.8                 | Yes             | 0%                     |
+| ipfs.infura.io    | 1346.3                      | 4.65 | 4.23 | 2.6/11.37                 | Yes             | 33%                     |
