@@ -103,3 +103,30 @@ Note:
 | cf-ipfs.com            | 393.3                     | 27.2 | 26.49 | 26.7/27.9                 | Yes             | 0%                     |
 | cloudflare-ipfs.com    | 106                      | 28.87 | 28.65 | 28/30                 | Yes             | 0%                     |
 | ipfs.infura.io    |-                      |- | - | -                 | -             | 100%                     |
+
+## Additional Tests
+
+### Typical droplet speeds
+
+Retrieving speedtest.net configuration...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by Converse in Code Networks (Fremont, CA) [2121.79 km]: 2.532 ms
+Testing download speed................................................................................
+Download: 865.72 Mbit/s
+Testing upload speed......................................................................................................
+Upload: 880.97 Mbit/s
+
+### Test Performed
+
+* Two IPFS nodes were spun and files were pinned to both the nodes.
+* Script uploaded to ipfs and instantly query cloudflare to cat the file and time taken to download are recorded.
+
+Files were generate with garbage content using ```dd if=/dev/urandom of=file1 bs=1M count=10```
+
+| File Size | Number of Files | Time to Upload | Time to Availability | Time to Download |
+| ---------- | ---------------- | -------------- | ------------------ | ---------------- |
+| 10MB       | 10               | 37.056µs           | ~368ns-100µs               | 278.94µs            |
+| 50MB       | 10               | 97.152µs           | ~500ns-80µs               | 304µs            |
+| 150MB      | 10               | 214.353µs          | ~600ns-100µs               | 278.94µs            |
+| 420MB      | 10               | 493.679µs          | ~74ns-100µs               | 381.886µs            |
