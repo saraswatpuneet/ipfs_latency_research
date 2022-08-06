@@ -108,14 +108,8 @@ Note:
 
 ### Typical droplet speeds
 
-Retrieving speedtest.net configuration...
-Retrieving speedtest.net server list...
-Selecting best server based on ping...
-Hosted by Converse in Code Networks (Fremont, CA) [2121.79 km]: 2.532 ms
-Testing download speed................................................................................
-Download: 865.72 Mbit/s
-Testing upload speed......................................................................................................
-Upload: 880.97 Mbit/s
+* Download: 865.72 Mbit/s
+* Upload: 880.97 Mbit/s
 
 ### Test Performed
 
