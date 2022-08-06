@@ -115,6 +115,7 @@ Note:
 
 * Two IPFS nodes were spun and files were pinned to both the nodes.
 * Script uploaded to ipfs and instantly query cloudflare to cat the file and time taken to download are recorded.
+* Script as run to upload and download on the same node where ipfs node is running.
 
 Files were generate with garbage content using ```dd if=/dev/urandom of=file1 bs=1M count=10```
 
