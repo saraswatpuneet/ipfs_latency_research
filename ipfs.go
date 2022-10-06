@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -11,7 +10,6 @@ import (
 	"time"
 
 	"github.com/bradhe/stopwatch"
-	shell "github.com/ipfs/go-ipfs-api"
 )
 
 func main() {
@@ -19,68 +17,80 @@ func main() {
 }
 
 func uploadToIPFSFromDirectory() {
-	ipfsShell1 := shell.NewShell("ip")
-	ipfsShell2 := shell.NewShell("ip")
-	// start a timer
-	sw := stopwatch.Start()
-	// loop of fils in files10mb directory and upload to ipfs shell
-	// get list of files in directory
-	files, err := ioutil.ReadDir("file10mb")
-	if err != nil {
-		log.Fatal(err)
-	}
-	hashes := make([]string, 0)
-	// loop through files
-	for _, file := range files {
-		// get file name
-		fileName := file.Name()
-		// open file
-		file, err := os.Open("file10mb/" + fileName)
-		if err != nil {
-			log.Fatal(err)
-		}
-		// upload file to ipfs
-		file2, err := os.Open("file10mb/" + fileName)
-		if err != nil {
-			log.Fatal(err)
-		}
-		hash, err := ipfsShell1.Add(file)
-		if err != nil {
-			log.Fatal(err)
-		}
-		_, err = ipfsShell2.Add(file2)
-		if err != nil {
-			log.Fatal(err)
-		}
-		// close file
-		file.Close()
-		// add hash to list of hashes
-		hashes = append(hashes, hash)
-	}
-	// stop timer
-	sw.Stop()
-	// print time
-	log.Println("Time:", sw.Milliseconds())
-	// save hashes to file
-	err = ioutil.WriteFile("hashes.txt", []byte(strings.Join(hashes, "\n")), 0644)
-	if err != nil {
-		log.Fatal(err)
-	}
-	// save time to file
-	file, err := os.Create("times_upload.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-	file.WriteString(sw.Milliseconds().String())
-	// restart timer
+	// ipfsShell1 := shell.NewShell("ip")
+	// //ipfsShell2 := shell.NewShell("ip")
+	// // start a timer
+	// sw := stopwatch.Start()
+	// // loop of fils in files10mb directory and upload to ipfs shell
+	// // get list of files in directory
+	// files, err := ioutil.ReadDir("file10mb")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// hashes := make([]string, 0)
+	// // loop through files
+	// for _, file := range files {
+	// 	// get file name
+	// 	fileName := file.Name()
+	// 	// open file
+	// 	file, err := os.Open("file10mb/" + fileName)
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// 	// // upload file to ipfs
+	// 	// file2, err := os.Open("file10mb/" + fileName)
+	// 	// if err != nil {
+	// 	// 	log.Fatal(err)
+	// 	// }
+	// 	hash, err := ipfsShell1.Add(file)
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// 	// _, err = ipfsShell2.Add(file2)
+	// 	// if err != nil {
+	// 	// 	log.Fatal(err)
+	// 	// }
+	// 	// close file
+	// 	file.Close()
+	// 	// add hash to list of hashes
+	// 	hashes = append(hashes, hash)
+	// }
+	// // stop timer
+	// sw.Stop()
+	// // print time
+	// log.Println("Time:", sw.Milliseconds())
+	// // save hashes to file
+	// err = ioutil.WriteFile("hashes.txt", []byte(strings.Join(hashes, "\n")), 0644)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// // save time to file
+	// file, err := os.Create("times_upload.txt")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// defer file.Close()
+	// file.WriteString(sw.Milliseconds().String())
+	// // restart timer
 	sw_total_file := stopwatch.Start()
-	// loop through hashes and get file from ipfs
+	// // loop through hashes and get file from ipfs
 	file_times_each, _ := os.Create("times_cat_each.txt")
 	file_times_total, _ := os.Create("times_cat_total.txt")
 	file_times_read, _ := os.Create("times_read.txt")
 	// ipfs cloud flare
-	cloudFlareUrl := "https://cloudflare-ipfs.com/ipfs/"
+	cloudFlareUrl := "http://127.0.0.1:9050/ipfs/"
+	hashes := []string{
+		"QmVrLgXEkVj7WrGYsVb4f1b5YAxZBRV1FoQjBkRep6REhn",
+		"QmavKiNNsGELXtdrx6i9ptG1T9wSMFhuy4oEL5oxAaXHt3",
+		"QmWtRfkwYyxVAwuDwLPageh9QwVr3MZHCcjN4XNAkKX9d7",
+		"QmPJLp6uW57ePqYfGyFaqf6ZmwbhPKRpqbt1tyTC1c2sXv",
+		"QmUnQnSG52bPDWRjsP8bCTFh2G7pHfSnCcYm4WSNp1yrUL",
+		"Qma8Bw8eqYKpxBHP6K1nxebQBfaLstapz6WdGntsFRXxmw",
+		"QmQG9c1cr6SKaY8SsjeVpVoLUWXvwNYU8KJDHrh8FHBzhZ",
+		"QmdN1aS4h46bRMrkHX99QeKugNiGbMoRKmFj6hoRYTiaTe",
+		"QmVMyczA1S3fqwyMJL9wzjqL1KSPpqm7UH5UZYVKiwBta2",
+	}
+
 	for _, hash := range hashes {
 		err := fmt.Errorf("starting error")
 		sw_each_file := stopwatch.Start()
@@ -109,7 +119,7 @@ func uploadToIPFSFromDirectory() {
 			buffer := make([]byte, 1024)
 			_, err := resp.Body.Read(buffer)
 			if err != nil {
-				if err == io.EOF {
+				if strings.Contains(err.Error(), "EOF") {
 					break
 				}
 				log.Println("Error:", err)

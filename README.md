@@ -113,15 +113,22 @@ Note:
 
 ### Test Performed
 
-* Two IPFS nodes were spun and files were pinned to both the nodes.
-* Script uploaded to ipfs and instantly query cloudflare to cat the file and time taken to download are recorded.
-* Script as run to upload and download on the same node where ipfs node is running.
+* One IPFS nodes were spun and files were pinned to the node.
+* Script uploaded to ipfs and instantly query cloudflare to cat the file and time taken to availability.
 
-Files were generate with garbage content using ```dd if=/dev/urandom of=file1 bs=1M count=10```
+* A local gateway was setup using IROH experimental ipfs hosting in rust and time to download was recorded against local gateway.
 
-| File Size | Number of Files | Time to Upload | Time to Availability | Time to Download |
-| ---------- | ---------------- | -------------- | ------------------ | ---------------- |
-| 10MB       | 10               | 37.056µs           | ~368ns-100µs               | 278.94µs            |
-| 50MB       | 10               | 97.152µs           | ~500ns-80µs               | 304µs            |
-| 150MB      | 10               | 214.353µs          | ~600ns-100µs               | 278.94µs            |
-| 420MB      | 10               | 493.679µs          | ~74ns-100µs               | 381.886µs            |
+## [IROH](https://github.com/n0-computer/iroh/) - IPFS Resource Optimized Hosting
+
+Files were generate with garbage content and were pinned to IPFS node with sizes around 420 MB x 10 files
+
+Files were pinned against a self hosted IPFS node on digital ocean and the retrieval gateway was hosted on different machine with IROH based experimental gateway.
+
+| File Size | Number of Files | Time to Upload | Time to Availability | Time to Download
+| ---------- | ---------------- | -------------- | ------------------ | ------------------ |
+| 420MB      | 10               | ~493.679ms          | ~74ms-100ms    | ~35 secs
+
+## References
+
+http://www.eecs.qmul.ac.uk/~tysong/files/IPFS22.pdf
+https://news.ycombinator.com/item?id=32736239
