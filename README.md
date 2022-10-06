@@ -131,3 +131,6 @@ Files were pinned against a self hosted IPFS node on digital ocean and the retri
 
 http://www.eecs.qmul.ac.uk/~tysong/files/IPFS22.pdf
 https://news.ycombinator.com/item?id=32736239
+https://github.com/ipfs/kubo/
+https://github.com/n0-computer/iroh
+https://github.com/maxim-saplin/ipfs_gateway_research
