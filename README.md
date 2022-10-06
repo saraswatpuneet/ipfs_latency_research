@@ -123,7 +123,7 @@ Files were generate with garbage content and were pinned to IPFS node with sizes
 
 Files were pinned against a self hosted IPFS node on digital ocean and the retrieval gateway was hosted on different machine with IROH based experimental gateway.
 
-| File Size | Number of Files | Time to Upload | Time to Availability | Time to Download
+| File Size | Number of Files | Time to Pin | Time to Availability | Time to Download
 | ---------- | ---------------- | -------------- | ------------------ | ------------------ |
 | 420MB      | 10               | ~493.679ms          | ~74ms-100ms    | ~35 secs
 
