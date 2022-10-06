@@ -125,7 +125,7 @@ Files were pinned against a self hosted IPFS node on digital ocean and the retri
 
 | File Size | Number of Files | Time to Pin | Time to Availability | Time to Download
 | ---------- | ---------------- | -------------- | ------------------ | ------------------ |
-| 420MB      | 10               | ~493.679ms          | ~74ms-100ms    | ~35 secs
+| 420MB      | 10               | ~493.679us          | ~74ms-100ms    | ~35 secs
 
 ## References
 
