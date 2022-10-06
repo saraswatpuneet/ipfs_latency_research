@@ -115,8 +115,7 @@ Note:
 
 * One IPFS nodes were spun and files were pinned to the node.
 * Script uploaded to ipfs and instantly query cloudflare to cat the file and time taken to availability.
-
-* A local gateway was setup using IROH experimental ipfs hosting in rust and time to download was recorded against local gateway.
+* A local gateway was setup using Cloudflare and IROH experimental ipfs hosting in rust and time to download was recorded as an average.
 
 ## [IROH](https://github.com/n0-computer/iroh/) - IPFS Resource Optimized Hosting
 
